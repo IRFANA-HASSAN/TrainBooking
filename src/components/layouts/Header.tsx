@@ -32,11 +32,24 @@ const Links = styled(Link)`
     text-decoration: underline;
     }
 `;
+const Title =styled.h1`
+    font-size: 28px;
+    font-weight:700;
+    margin-bottom:1rem;
+    color: white;
+    text-decoration:none;
+`;
+const Container = styled.a`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Header = () => {
   return (
     <Navbar>
-     <Links to="/"><Logo src='/icons/logo.png' alt='logo'/></Links>
+      <Link to='/'><div style={{  textDecoration: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center', }}><Logo src="/icons/logo.png" alt="logo" /><Title>Trackster</Title></div>
+      </Link>
       <NavList>
         <Links to="/">Home</Links>
         <Links to="/confirmation">Booking</Links>
